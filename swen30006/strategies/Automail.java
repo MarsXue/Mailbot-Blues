@@ -16,6 +16,7 @@ public class Automail {
     	// Swap the next line for the one below
 //    	mailPool = new SimpleMailPool();
     	mailPool = new MyMailPool();
+//    	mailPool = new MyMailPoolTest();
 //    	mailPool = new PQMailPool();
     	
     /** Initialize the RobotAction */
@@ -23,10 +24,10 @@ public class Automail {
     	boolean strong = true; // Can handle any weight that arrives at the building
     	
     	// Swap the next two lines for the two below those
-    	IRobotBehaviour robotBehaviourW = new SimpleRobotBehaviour(weak);
-    	IRobotBehaviour robotBehaviourS = new SimpleRobotBehaviour(strong);
-//    	IRobotBehaviour robotBehaviourW = new MyRobotBehaviour(weak);
-//    	IRobotBehaviour robotBehaviourS = new MyRobotBehaviour(strong);
+//    	IRobotBehaviour robotBehaviourW = new SimpleRobotBehaviour(weak);
+//    	IRobotBehaviour robotBehaviourS = new SimpleRobotBehaviour(strong);
+    	IRobotBehaviour robotBehaviourW = new MyRobotBehaviour(weak);
+    	IRobotBehaviour robotBehaviourS = new MyRobotBehaviour(strong);
     	    	
     	/** Initialize robot */
     	robot1 = new Robot(robotBehaviourW, delivery, mailPool, weak); /* shared behaviour because identical and stateless */

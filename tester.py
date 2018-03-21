@@ -26,7 +26,7 @@ def main():
         if score == -1:
             print('ERROR where seed =', seed)
             return
-        print('seed =', seed, 'score =',score)
+        print('seed =', seed, 'score =', score)
         scores.append(score)
 
     print('--------')

@@ -65,7 +65,6 @@ public class SimpleMailPool implements IMailPool{
 		else{
 			return null;
 		}
-		
 	}
 	
 	// Never really wanted to be a programmer any way ...
