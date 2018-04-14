@@ -29,6 +29,8 @@ public class MyMailPool implements IMailPool {
 	private PriorityQueue<MailItem> nonPriorityPool;
 	// maximum mailitem number for robot to carry
 	private static final int MAX_TAKE = 4;
+	// maximum weight for weak robot to carry
+	private static final int MAX_WEIGHT = 2000;
 	
 	/**
 	 * Constructor
@@ -267,7 +269,7 @@ public class MyMailPool implements IMailPool {
 	@Override
 	public void fillStorageTube(StorageTube tube, boolean strong) {
 		
-		int max = strong ? Integer.MAX_VALUE : 2000;
+		int max = strong ? Integer.MAX_VALUE : MAX_WEIGHT;
 		
 		try {
 			while(!tube.isEmpty()) {
